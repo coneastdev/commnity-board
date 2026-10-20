@@ -1,0 +1,13 @@
+body {
+    background-color: #fffefe;
+    color: #000;
+}
+
+div.posts {
+    width: 90%;
+    margin: 0 auto;
+}
+
+button.carBtn {
+    width: 2vw;
+}
