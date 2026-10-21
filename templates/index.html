@@ -26,21 +26,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Add</a>
+                    <a class="nav-link" href="/create">Create</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Manage</a>
+                    <a class="nav-link" href="/manage">Manage</a>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                    Settings
-                    </button>
-                    <div class="menu">
-                    <a class="menu-item" href="#">Action</a>
-                    <a class="menu-item" href="#">Another action</a>
-                    <hr class="menu-divider">
-                    <a class="menu-item" href="#">Something else here</a>
-                    </div>
+                    <a class="nav-link" href="/settings">Settings</a>
                 </li>
                 </ul>
             </div>
@@ -50,8 +42,25 @@
     <br />
     <div id="content">
         <div id="featured" class="posts">
-            <h2>Featured posts</h2>
             <div id="carouselStackedIndicators" class="carousel slide">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Featured posts</h2>
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div>
+                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="prev">
+                        <span class="carousel-icon-prev" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="next">
+                        <span class="carousel-icon-next" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+                </div>
                 <div class="carousel-inner rounded-5">
                     <div class="carousel-item active">
                     <img src="https://placehold.co/1024x512" class="d-block w-100" alt="...">
@@ -63,23 +72,6 @@
                     <img src="https://placehold.co/1024x512" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="prev">
-                        <span class="carousel-icon-prev" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide="next">
-                        <span class="carousel-icon-next" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    </div>
-                    <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                </div>
             </div>
         </div>
         <br />
@@ -87,6 +79,13 @@
             <div id="carouselMultiple" class="carousel slide" data-bs-ends="stop" style="--bs-carousel-items: 3; --bs-carousel-items-gap: 1rem;">
                 <div class="d-flex justify-content-between align-items-center">
                     <h2 class="mb-0">New posts</h2>
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
                     <div>
                     <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselMultiple" data-bs-slide="prev" style="--bs-carousel-control-icon-width: 1rem;">
                         <span class="carousel-icon-prev" aria-hidden="true"></span>
