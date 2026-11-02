@@ -3,9 +3,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from typing import Annotated
-from fastapi import Depends, FastAPI, HTTPException, Query
-from sqlmodel import Field, Session, SQLModel, create_engine, select
+from fastapi import FastAPI
+from sqlmodel import Field, SQLModel, create_engine
 import datetime
 
 class User(SQLModel, table=True):
@@ -47,37 +46,24 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="index.html"
-    )
+    return templates.TemplateResponse(request=request, name="index.html")
 
 @app.get("/login", response_class=HTMLResponse)
 async def login(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="login.html"
-    )
+    return templates.TemplateResponse(request=request, name="login.html")
 
 @app.get("/profile", response_class=HTMLResponse)
 async def profile(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="index.html"
-    )
+    return templates.TemplateResponse(request=request, name="index.html")
 
 @app.get("/create", response_class=HTMLResponse)
 async def create(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="index.html"
-    )
-
+    return templates.TemplateResponse(request=request, name="index.html")
 
 @app.get("/manage", response_class=HTMLResponse)
 async def create(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="manage.html"
-    )
+    return templates.TemplateResponse(request=request, name="manage.html")
 
 @app.get("/settings", response_class=HTMLResponse)
 async def create(request: Request):
-    return templates.TemplateResponse(
-        request=request, name="settings.html"
-    )
+    return templates.TemplateResponse(request=request, name="settings.html")
