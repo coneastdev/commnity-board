@@ -68,3 +68,16 @@ async def create(request: Request):
     return templates.TemplateResponse(
         request=request, name="index.html"
     )
+
+
+@app.get("/manage", response_class=HTMLResponse)
+async def create(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="manage.html"
+    )
+
+@app.get("/settings", response_class=HTMLResponse)
+async def create(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="settings.html"
+    )
